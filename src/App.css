@@ -1,0 +1,143 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.container{
+  background-color: rgb(216, 210, 195);
+}
+h1{
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding-top:10vh ;
+}
+.header{
+  height: 18.3cm;
+  /* background-color: rgb(11, 52, 17); */
+}
+form{
+  width: 400px;
+  background-color: rgb(36, 77, 135);
+  border-radius: 10px;
+  margin: 10vh auto 0 auto;
+  border-radius: 5px;
+  padding: 30px;
+  outline: none;
+  display: flex;
+  gap: 30px;
+}
+input{
+  height:30px;
+  width: 300px;
+  border-radius: 5px;
+  font-size: 20px;
+  margin-top: 5px;
+  padding: 10px;
+  border: 1px solid;
+}
+button{
+  background-color: rgb(198, 214, 212);
+  border: 1px solid rgb(198, 214, 212);
+  border-radius: 5px;
+  padding: 10px;
+  margin: 9px 0px;
+  cursor: pointer;
+  font-size: 20px;
+}
+.task-list {
+  width: 300px;
+  margin: 20px auto; 
+  display: flex;
+  flex-direction: column;
+  gap: 10px; 
+}
+.task-list p {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid;
+  width: 300px;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.task-list p span {
+  flex: 1; 
+}
+.editimg, .deleteimg {
+  width: 20px;
+  height: auto;
+  cursor: pointer;
+  margin-left: 10px; 
+}
+.task-list p.completed span {
+  text-decoration: line-through;
+  color: gray;
+}
+.checkimg{
+  height:auto;
+  width: 20px;
+  cursor: pointer;
+
+}
+@media (max-width: 470px) {
+  h1 {
+    font-size: 1.5em;
+    padding-top: 5vh;
+  }
+
+  form {
+    width: 80%; 
+    padding: 20px;
+    flex-direction: column; 
+    gap: 10px; 
+  }
+
+  input {
+    width: auto; 
+    font-size: 16px; 
+    padding: 8px;
+  }
+
+  button {
+    width: 20%; 
+    font-size: 16px; 
+    padding: 8px;
+  }
+
+  .task-list {
+    width: auto;
+    margin: 15px auto;
+    gap: 8px;
+  }
+
+  .task-list p {
+    width: auto;
+    padding: 7px;
+    flex-direction: column; 
+    align-items: flex-start; 
+  }
+
+  .task-list p span {
+    font-size: 14px;
+    margin-bottom: 5px; 
+  }
+
+  .editimg, .deleteimg {
+    width: 18px; 
+    margin-left: 0; 
+    padding-bottom: 0;
+  }
+
+  .checkimg {
+    width: 20px; 
+    margin-right: 5px; 
+  }
+
+  .icon-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px; 
+    flex-wrap: wrap;
+  }
+}
