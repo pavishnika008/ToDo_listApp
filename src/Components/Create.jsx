@@ -13,20 +13,18 @@ export default function Create() {
   function save(e) {
     e.preventDefault();
     if (editIndex !== null) {
-      // If in edit mode, update the existing task
       const updatedTasks = [...task];
       updatedTasks[editIndex].text = ToDo;
       setTask(updatedTasks);
-      setEditIndex(null); // Exit edit mode
-      setToDo(''); // Clear input
+      setEditIndex(null); 
+      setToDo(''); 
     } else {
-      // If not in edit mode, add a new task as an object with `text` and `completed`
       axios
         .post('https://6719d694acf9aa94f6a7fecb.mockapi.io/react/Demo', { ToDo })
         .then((s) => {
           alert('ToDo saved!!!');
           console.log(s);
-          setTask([...task, { text: ToDo, completed: false }]); // Add new task object
+          setTask([...task, { text: ToDo, completed: false }]);
           setToDo('');
         })
         .catch((err) => {
@@ -54,7 +52,7 @@ export default function Create() {
   // Start editing a task
   function startEdit(index) {
     setEditIndex(index);
-    setToDo(task[index].text); // Set the input field with the current task text for editing
+    setToDo(task[index].text); 
   }
 
   return (
@@ -67,7 +65,7 @@ export default function Create() {
           value={ToDo}
           onChange={(e) => setToDo(e.target.value)}
         />
-        <button type="submit">{editIndex !== null ? 'Update' : 'Add'}</button> {/* Update button text in edit mode */}
+        <button type="submit">{editIndex !== null ? 'Update' : 'Add'}</button> 
       </form>
 
       <div className="task-list">
@@ -86,13 +84,13 @@ export default function Create() {
           className="editimg"
           src={editimg}
           alt="Edit icon"
-          onClick={() => startEdit(index)} // Trigger edit mode
+          onClick={() => startEdit(index)} 
         />
         <img
           className="deleteimg"
           src={deleteimg}
           alt="Delete icon"
-          onClick={() => deleteTask(index)} // Trigger delete
+          onClick={() => deleteTask(index)} 
         />
       </div>
           </p>
